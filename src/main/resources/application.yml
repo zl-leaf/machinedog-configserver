@@ -16,3 +16,11 @@ spring:
     url:
     username:
     password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://machinedog.yipzale.me:1111/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 5
