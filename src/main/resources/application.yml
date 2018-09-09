@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: machinedog-configserver
+  profiles:
+    active: jdbc
+  cloud:
+    config:
+      server:
+        jdbc:
+          sql: SELECT name, val from properties where application=? and profile=? and label=?
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url:
+    username:
+    password:
